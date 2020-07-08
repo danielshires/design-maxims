@@ -1,0 +1,617 @@
+// Breakpoints
+
+$breakpoint-desktop-hd: 1440px;
+$breakpoint-desktop: 1025px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 414px;
+
+// Flex Box
+
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// Padding
+
+@mixin padding-desktop {
+  padding: 2rem;
+}
+
+@mixin padding-tablet {
+  padding: 1.5rem;
+}
+
+@mixin padding-mobile {
+  padding: 1rem;
+}
+
+// Brand Colours
+
+$background-color: #16c5d3;
+$background-color-header: #5de3ee;
+$update-color: rgb(208, 90, 140);
+
+/* -- Page -- */
+
+/*
+* {
+  border: 1px solid black;
+}
+*/
+
+body {
+  font-family: "Work Sans", sans-serif;
+  height: auto;
+  width: auto;
+  width: 100vw;
+  height: calc(100vh - 125px);
+}
+
+.background-color {
+  background-color: $update-color;
+}
+
+/* -- Header -- */
+
+header {
+  display: flex;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  width: 100vw;
+  z-index: 1;
+
+  @media only screen and (min-width: $breakpoint-desktop-hd) {
+    height: 125px;
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop-hd) {
+    height: 100px;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: 80px;
+  }
+}
+
+.header-content {
+  @include flex-space();
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+
+  h1 {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: -3px 3px 0px rgba(0, 0, 0, 0.6);
+    padding: 0;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      font-size: 1.25rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  .logo .logo-sub-desktop {
+    padding-top: 0.5rem;
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      display: none;
+    }
+  }
+}
+
+// Buttons
+
+button.mobile-button-feedback {
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background-position: center;
+  transform: translateY(0px);
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-2px);
+    transition: 200ms;
+  }
+}
+
+button.mobile-button-random {
+  border-radius: 0.3rem;
+  background-color: rgba(255, 255, 255, 1);
+  color: $update-color;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1rem;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background-position: center;
+  transition: translateY(0px);
+  transition: 200ms;  
+
+  &:hover {
+    transform: translateY(-2px);
+    transition: 200ms;
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop-hd) {
+    font-size: 1.25rem;
+    margin-right: 1.5rem;
+    background-position: center;
+    transition: 200ms;
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    font-size: 1.125rem;
+    margin-right: 1.5rem;
+    background-position: center;
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+    margin-right: 1rem;
+    border-radius: 0.2rem;
+  }
+}
+
+/* -- Nav -- */
+
+.menu {
+  width: 90px;
+  transform: scale(1);
+  transition: 200ms;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+  }
+}
+
+nav {
+  background-color: inherit;
+
+  ul {
+    list-style: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    opacity: 0.5;
+    transition: 250ms;
+  }
+
+  a:hover {
+    opacity: 1;
+    transition: 100ms;
+  }
+}
+
+li.nav-desktop-text {
+  padding-right: 0.5rem;
+}
+
+// Nav Media Queries
+
+.nav-mobile {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.nav-desktop {
+  @media only screen and (max-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+// Nav Overlay
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  transition: 0.5s;
+  opacity: 1;
+  height: 100vh;
+}
+
+.overlay a {
+  padding: 0 0rem 1rem 0rem;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  display: block;
+  transition: 0.2s;
+  opacity: 0.5s;
+  text-align: center;
+}
+
+a.menu-title {
+  font-weight: 800;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  opacity: 0.6;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  font-size: 1.5rem;
+}
+
+.menu-items {
+  width: 100%;
+}
+
+.menu-cta {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  .menu-cta-item {
+    padding-right: 1rem;
+  }
+
+  a {
+    padding: 0 0rem 0rem 0rem;
+  }
+}
+
+/* -- Main -- */
+
+main {
+  color: white;
+  height: 76vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../png/quote-mark.png");
+    background-size: 50vw;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: bottom right;
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.04;
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      background-position: center;
+      background-size: 70vw;
+      right: 0%;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      background-position: center bottom;
+      background-size: 70vw;
+      right: 0%;
+      bottom: -5%
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      background-position: center bottom;
+      background-size: 80vw;
+      bottom: 0%
+    }
+  }
+
+  /* -- Home Wrapper -- */
+
+  .home-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* -- Quote Wrapper -- */
+  .quote-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+
+    @media only screen and (min-width: $breakpoint-desktop-hd) {
+      height: 100%;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-desktop-hd) {
+      align-content: flex-start;
+      height: 90%;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      align-content: flex-start;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile) {
+      align-content: flex-start;
+
+    }
+
+    .quote {
+      font-weight: 600;
+      opacity: 0.9;
+      max-width: 100vw;
+
+      @media only screen and (min-width: $breakpoint-desktop-hd) {
+        margin-top: 0.75rem;
+        font-size: 6.5rem;
+        line-height: 7.25rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop-hd) {
+        margin-top: 0.75rem;
+        font-size: 5rem;
+        line-height: 5.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop) {
+        margin-top: 0.75rem;
+        font-size: 4rem;
+        line-height: 4.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        margin-top: 0.75rem;
+        font-size: 3.5rem;
+        line-height: 4rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    .author {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5;
+      height: auto;
+
+      @media only screen and (min-width: $breakpoint-desktop-hd) {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop-hd) {
+        margin-top: 0.75rem;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop) {
+        margin-top: 0.75rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop) {
+        margin-top: 0.75rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        margin-top: 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+      }
+
+      a {
+        color: inherit;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+        transition: 500ms;
+        opacity: 0.5;
+        height: 100%;
+
+        /* -- &:after {
+          content: url("../png/external-link.png");
+          display: inline-block;
+          padding-left: 0.5rem;
+          height: 50px;
+          transform: translateY(0px);
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+         -- */
+      }
+
+      a:hover {
+        transition: 500ms;
+        opacity: 1;
+      }
+    }
+  }
+
+  /* -- Content Wrapper -- */
+
+  .content-wrapper {
+    @include padding-desktop();
+    background-color: white;
+    height: 100vh;
+  }
+}
+
+/* -- Footer -- */
+
+footer {
+  height: auto;
+  width: 100%;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  .footer-desktop {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      @include flex-space();
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      @include flex-space();
+      display: none;
+      width: 100%;
+    }
+  }
+
+  .footer-mobile {
+
+    .footer-sub {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 0.25rem;
+      padding: 0rem 1rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        font-size: 1.25rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        font-size: 1rem;
+      }
+    }
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      display: none;
+    }
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      @include flex-space();
+      width: 100%;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: 200ms;
+
+    &:hover {
+      opacity: 1;
+      transition: 200ms;
+    }
+
+    span {
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+
+// Media Quieries
+
+// Page Background
+page-background {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  z-index: 0;
+}
+
+// Page Padding
+
+header,
+footer,
+main {
+  @media only screen and (min-width: $breakpoint-desktop-hd) {
+    @include padding-desktop();
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop-hd) {
+    @include padding-tablet();
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    @include padding-tablet();
+  }
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @include padding-mobile();
+  }
+}
+
+ul {
+  list-style: none;
+}
