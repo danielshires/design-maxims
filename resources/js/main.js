@@ -1,3 +1,5 @@
+//  Original code by Sophanarith Sok – https://www.freecodecamp.org/news/creating-a-bare-bones-quote-generator-with-javascript-and-html-for-absolute-beginners-5264e1725f08/
+
 var quotes = [
   ["The faker you are, the more succesfull you can be.", '<a href="https://www.youtube.com/watch?v=bEg5ySTUGxE" target="_blank">Pablo Stanley</a>'],
   [

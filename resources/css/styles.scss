@@ -316,7 +316,7 @@ a.menu-title {
 
 main {
   color: white;
-  height: 76vh;
+  height: 80vh;
   position: relative;
 
   &::before {
@@ -333,23 +333,32 @@ main {
     left: 0px;
     opacity: 0.04;
 
-    @media only screen and (max-width: $breakpoint-desktop) {
-      background-position: center;
-      background-size: 70vw;
+    @media only screen and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+      background-position: bottom right;
+      background-size: 40vw;
+      right: 5%;
+      bottom: 15%;
+    }
+
+
+    @media only screen and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+      background-position: center bottom;
+      background-size: 80vw;
       right: 0%;
+      bottom: 0%;
     }
 
     @media only screen and (max-width: $breakpoint-tablet) {
       background-position: center bottom;
       background-size: 70vw;
       right: 0%;
-      bottom: -5%
+      bottom: 0%
     }
 
     @media only screen and (max-width: $breakpoint-mobile) {
       background-position: center bottom;
       background-size: 80vw;
-      bottom: 0%
+      bottom: 7.5%
     }
   }
 
@@ -368,27 +377,23 @@ main {
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
-    width: 100%;
+    height: 90%;
 
     @media only screen and (min-width: $breakpoint-desktop-hd) {
-      height: 100%;
       width: 100%;
     }
 
     @media only screen and (max-width: $breakpoint-desktop-hd) {
+      justify-content: flex-start;
       align-content: flex-start;
-      height: 90%;
       width: 100%;
     }
 
     @media only screen and (max-width: $breakpoint-desktop) {
-      align-content: flex-start;
-      height: 100%;
-      width: 100%;
+ 
     }
 
     @media only screen and (max-width: $breakpoint-mobile) {
-      align-content: flex-start;
 
     }
 
