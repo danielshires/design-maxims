@@ -3,47 +3,47 @@
 
 <head>
   <meta charset="utf-8" />
-  <title></title>
-  <meta name="description" content="" />
+  <title>Design Maxims – Short quotes and ruminations on what design (and life) can be.</title>
+  <meta name="description" content="Short quotes and ruminations on what design (and life) can be.">
+  <meta name="keywords" content="Design, quotes, inspiration">
+  <meta name="author" content="Daniel Shires">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="apple-touch-icon" href="icon.png" />
-  <!-- Place favicon.ico in the root directory -->
 
+  <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-  <meta name="theme-color" content="#fafafa" />
 </head>
 
-<body id="body" data-barba="wrapper" class="background-color">
+<body id="body" class="background-color" data-barba="wrapper">
   <div id="page" class="content">
     <!-- Add your header content here -->
     <header id="header" class="header">
       <div class="header-content">
         <div class="logo">
-          <h1 aria-label="Design Maxims"><a href="index.html">Desgin Maxims</a></h1>
-          <h2 aria-label=" Short quotes and ruminations on what design (and
-          life) can be."class="logo-sub-desktop">
+          <h1><a href="index.html">Desgin Maxims</a></h1>
+          <h2 class="logo-sub-desktop">
             Short quotes and ruminations on what design (and
             life) can be.
           </h2>
         </div>
         <nav id="nav-desktop" class="nav-desktop">
           <ul class>
-            <li class="nav-desktop-text" aria-label="About"><a href="index.html">About</a></li>
-            <li class="nav-desktop-text"aria-label="Get in touch"><a href="mailto:hello@danielshires.com">Get in touch</a></li>
-            <li class="nav-desktop-button" aria-label="Random"><button class="mobile-button-random" onclick="getQuote()" name="Random" aria-role="button">Random</button>
+            <!-- <li class="nav-desktop-text"><a href="about.html">About</a></li> -->
+            <li class="nav-desktop-text"><a href="mailto:hello@danielshires.com">Get in touch</a></li>
+            <li class="nav-desktop-button"><button class="mobile-button-random" onclick="getQuote()"
+                name="Random">Random</button>
             </li>
           </ul>
         </nav>
 
         <nav id="nav-mobile" class="nav-mobile">
           <ul>
-            <li class="nav-mobile-button"><button class="mobile-button-random" onclick="getQuote()" aria-role="button">Random</button></li>
+            <li class="nav-mobile-button"><button class="mobile-button-random" onclick="getQuote()">Random</button></li>
             <li onclick="openNav()" class="nav-mobile-menu" style="cursor: pointer;"><i class="fa fa-bars"></i></li>
           </ul>
         </nav>
@@ -51,28 +51,33 @@
         <div id="mySidenav" class="overlay">
           <div class="overlay-content" id="overlay-content">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true""></i></a>
-            <div class=" enu-items">
+            <div class=" menu-items">
                 <a class="menu-title" href="index.html">Design Maxims</a>
-                <a href="about.html">About</a>
+                <!-- <a href="about.html">About</a> -->
                 <a href="mailto:hello@danielshires.com?subject=Hey">Get in Touch</a>
           </div>
           <div class="menu-cta">
-            <div class="menu-cta-item"><button class="mobile-button-feedback" onclick="location.href='https://hello705083.typeform.com/to/H02Wke'" type="button" target="_blank" aria-role="button">Feedback</button></li>
+            <div class="menu-cta-item">
+              <button class="mobile-button-feedback"
+                onclick="location.href='https://hello705083.typeform.com/to/H02Wke'" type="button"
+                target="_blank">Feedback</button>
+                <a href="https:www.danielshires.com" target="_blank">© Daniel Shires 2020</a>             
             </div>
-            <div class="menu-cta-item"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+            <!-- <div class="menu-cta-item"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter" 
                   aria-hidden="true"></i></a></div>
-            <div class="menu-cta-item"><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram"
-                  aria-hidden="true"></a></i></div>
+           <div class="menu-cta-item"><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram" 
+                  aria-hidden="true"></a></i></div>-->
           </div>
         </div>
       </div>
   </div>
   </header>
-  <!-- Page Background -->
+  <!-- Barba Loader -->
+  <div class="loader"></div>
 
   <!-- Add your site or application content here -->
-  <main id="main" data-barba="container" data-barba-namespace="home">
-    <div class="home-wrapper ">
+  <main id="main" data-barba="container">
+    <div class="home-wrapper">
       <div class="quote-wrapper">
         <div id="quotetext" class="quote" aria-label="Quote"></div>
         <div id="quotesource" class="author" aria-label="Author"></div>
@@ -95,25 +100,11 @@
     <div class="footer-mobile">
       <div class="footer-sub">
         <p>Short quotes and ruminations on what design (and
-        life) can be.</p>
+          life) can be.</p>
       </div>
     </div>
   </footer>
   </div>
-
-  <!-- Menu Script -->
-
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "80%";
-      document.getElementById("overlay-content").style.opacity = "1";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("overlay-content").style.opacity = "0";
-    }
-  </script>
 
   <!-- Scripts -->
   <script src="resources/js/vendor/modernizr-3.8.0.min.js"></script>
@@ -126,12 +117,24 @@
         '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
       );
   </script>
-  <script src="resources/js/plugins.js"></script>
+
+  <!-- Menu Script -->
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "80%";
+      // document.getElementById("overlay-content").style.opacity = "1";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      // document.getElementById("overlay-content").style.opacity = "0";
+    }
+  </script>
+
+  <!-- Main JS -->
   <script src="resources/js/main.js"></script>
 
-  <script src="https://unpkg.com/@barba/core"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-  <script src="index.js"></script>
 </body>
 
 </html>

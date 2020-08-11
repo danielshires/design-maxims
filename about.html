@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="theme-color" content="#fafafa" />
+</head>
+
+<body id="body" data-barba="wrapper" class="background-color">
+  <div id="page" class="content">
+    <!-- Add your header content here -->
+    <header id="header" class="header">
+      <div class="header-content">
+        <div class="logo">
+          <h1><a href="index.html">Desgin Maxims</a></h1>
+          <h2 class="logo-sub-desktop">
+            Short quotes and ruminations on what design (and
+            life) can be.
+          </h2>
+        </div>
+        <nav id="nav-desktop" class="nav-desktop">
+          <ul class>
+            <li class="nav-desktop-text"><a href="about.html">About</a></li>
+            <li class="nav-desktop-text"><a href="mailto:hello@danielshires.com">Get in touch</a></li>
+            <li class="nav-desktop-button"><button class="mobile-button-random" onclick="getQuote()"
+                name="Random">Random</button>
+            </li>
+          </ul>
+        </nav>
+
+        <nav id="nav-mobile" class="nav-mobile">
+          <ul>
+            <li class="nav-mobile-button"><button class="mobile-button-random" onclick="getQuote()">Random</button></li>
+            <li onclick="openNav()" class="nav-mobile-menu" style="cursor: pointer;"><i class="fa fa-bars"></i></li>
+          </ul>
+        </nav>
+
+        <div id="mySidenav" class="overlay">
+          <div class="overlay-content" id="overlay-content">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true""></i></a>
+            <div class=" menu-items">
+                <a class="menu-title" href="index.html">Design Maxims</a>
+                <a href="about.html">About</a>
+                <a href="mailto:hello@danielshires.com?subject=Hey">Get in Touch</a>
+          </div>
+          <div class="menu-cta">
+            <div class="menu-cta-item"><button class="mobile-button-feedback"
+                onclick="location.href='https://hello705083.typeform.com/to/H02Wke'" type="button"
+                target="_blank">Feedback</button></li>
+            </div>
+            <div class="menu-cta-item"><a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+                  aria-hidden="true"></i></a></div>
+            <div class="menu-cta-item"><a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram"
+                  aria-hidden="true"></a></i></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </header>
+  <!-- Barba Loader -->
+  <div class="loader"></div>
+  <!-- Add your site or application content here -->
+  <main id="main" data-barba="container">
+    <div class="home-wrapper">
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>Design is complicated. When I walk through the city and stare at 1000ft buildings built from steel,
+            concrete
+            and glass – the main consideration I have is – how the hell did anyone build that? Why does that overhanging
+            beam hang there? Who put that there? Who thought of it? And why didn't they think of doing something
+            different
+            that day?</p>
+          <p>Design maxims however are simple. They are short statements on what design is, what it can, and can't be. I
+            find designers to be among to most interesting people. I take great inspiration from my peers in the design
+            industry and I'm constantly being influenced by their work and ideas. This is a place where I share those
+            ideas with everyone who wishes to visit. </p>
+          <p>The project is a work in progress by <a href="https://www.danielshires.com">Daniel Shires</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Add your footer content here -->
+
+  <footer id="footer" class="">
+    <div class="footer-desktop">
+      <div class="footer left-side">
+        <a href="www.danielshires.com">© Daniel Shires 2020</a>
+      </div>
+      <div class="footer right-side animate__animated animate__bounce animate__delay-3s">
+        <a href="https://hello705083.typeform.com/to/H02Wke" target=_blank><span>Feedback</span></a>
+      </div>
+    </div>
+
+    <div class="footer-mobile">
+      <div class="footer-sub">
+        <p>Short quotes and ruminations on what design (and
+          life) can be.</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <!-- J-Querery -->
+  <script src="resources/js/vendor/modernizr-3.8.0.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery ||
+      document.write(
+        '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+      );
+  </script>
+
+  <!-- Main JS -->
+  <script src="resources/js/main.js"></script>
+
+  <!-- Menu Script -->
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "80%";
+      document.getElementById("overlay-content").style.opacity = "1";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("overlay-content").style.opacity = "0";
+    }
+  </script>
+
+
+
+</body>
+
+</html>

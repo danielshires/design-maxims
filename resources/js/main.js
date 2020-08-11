@@ -157,6 +157,7 @@ var quotes = [
 ];
 
 
+
 // On page load get quotes
 window.onload = function () {
   randomquote = Math.floor(Math.random() * 1);

@@ -13,7 +13,7 @@ body {
 }
 
 .background-color {
-  background-color: #d05a8c;
+  background-color: #0C82EA;
 }
 
 /* -- Header -- */
@@ -118,7 +118,7 @@ button.mobile-button-feedback {
   transition: 200ms;
 }
 
-button.mobile-button-feedback:hover, button.mobile-button-feedback:focus {
+button.mobile-button-feedback:hover {
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -129,7 +129,7 @@ button.mobile-button-feedback:hover, button.mobile-button-feedback:focus {
 button.mobile-button-random {
   border-radius: 0.3rem;
   background-color: white;
-  color: #d05a8c;
+  color: #0C82EA;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1rem;
@@ -223,6 +223,10 @@ nav a:hover {
   transition: 100ms;
 }
 
+nav a:active {
+  opacity: 1;
+}
+
 li.nav-desktop-text {
   padding-right: 0.5rem;
 }
@@ -311,6 +315,9 @@ a.menu-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -318,11 +325,24 @@ a.menu-title {
 }
 
 .menu-cta .menu-cta-item {
-  padding-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu-cta a {
-  padding: 0 0rem 0rem 0rem;
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 /* -- Main -- */
@@ -331,6 +351,7 @@ main {
   height: 80vh;
   position: relative;
   /* -- Home Wrapper -- */
+  /* -- About Wrapper -- */
   /* -- Quote Wrapper -- */
   /* -- Content Wrapper -- */
 }
@@ -393,6 +414,46 @@ main .home-wrapper {
   width: 100%;
 }
 
+main .about-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90%;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+main .about-wrapper .about-text {
+  width: 50%;
+}
+
+main .about-wrapper p {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  opacity: 1;
+}
+
+main .about-wrapper p a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: white;
+}
+
+main .about-wrapper p a:hover {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  opacity: 1;
+}
+
 main .quote-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,6 +470,7 @@ main .quote-wrapper {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   height: 90%;
+  word-wrap: break-word;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -476,7 +538,7 @@ main .quote-wrapper .quote {
 main .quote-wrapper .author {
   text-transform: uppercase;
   font-weight: 600;
-  opacity: 0.5;
+  opacity: 0.7;
   height: auto;
 }
 
