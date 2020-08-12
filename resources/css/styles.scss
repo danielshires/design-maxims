@@ -1,5 +1,6 @@
 // Breakpoints
 
+$breakpoint-desktop-xxl: 1600px;
 $breakpoint-desktop-hd: 1440px;
 $breakpoint-desktop: 1025px;
 $breakpoint-tablet: 768px;
@@ -103,7 +104,7 @@ header {
     font-size: 18px;
     font-weight: 400;
     color: white;
-    opacity: 0.5;
+    opacity: 0.7;
     margin: 0;
   }
 
@@ -211,7 +212,7 @@ nav {
   }
 
   a {
-    opacity: 0.5;
+    opacity: 0.7;
     transition: 250ms;
 
     &:hover {
@@ -309,7 +310,7 @@ a.menu-title {
   margin-top: 2rem;
 
   .menu-cta-item {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,7 +425,7 @@ main {
     word-wrap: break-word;
 
     @media only screen and (min-width: $breakpoint-desktop-hd) {
-      width: 100%;
+      width: 90%;
     }
 
     @media only screen and (max-width: $breakpoint-desktop-hd) {
@@ -442,7 +443,13 @@ main {
       opacity: 0.9;
       max-width: 100vw;
 
-      @media only screen and (min-width: $breakpoint-desktop-hd) {
+      @media only screen and (min-width: $breakpoint-desktop-xxl) {
+        margin-top: 0.75rem;
+        font-size: 8rem;
+        line-height: 9rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop-xxl) {
         margin-top: 0.75rem;
         font-size: 6.5rem;
         line-height: 7.25rem;
@@ -478,7 +485,14 @@ main {
       opacity: 0.7;
       height: auto;
 
+
       @media only screen and (min-width: $breakpoint-desktop-hd) {
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+
+      @media only screen and (max-width: $breakpoint-desktop-hd) {
         margin-top: 1.5rem;
         font-size: 2rem;
         line-height: 2.5rem;
@@ -514,7 +528,7 @@ main {
         text-decoration: none;
         border-bottom: 1px solid white;
         transition: 500ms;
-        opacity: 0.5;
+        opacity: 0.7;
         height: 100%;
 
         &:hover {
@@ -607,7 +621,7 @@ footer {
   a {
     text-decoration: none;
     color: white;
-    opacity: 0.5;
+    opacity: 0.7;
     transition: 200ms;
 
     &:hover {
