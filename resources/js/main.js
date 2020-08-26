@@ -119,7 +119,7 @@ var quotes = [
     '<a href="https://en.wikipedia.org/wiki/Massimo_Vignelli" target="_blank">Massimo Vignelli</a>',
   ],
   [
-    "Design everything on the assumption that people are not heartless or stupid but marvelously capable, given the chance.",
+    "Design everything on the assumption that people are not heartless or stupid but marvelously capable.",
     '<a href="https://en.wikipedia.org/wiki/John_Chris_Jones" target="_blank">John Chris Jones</a>',
   ],
   [
@@ -135,7 +135,7 @@ var quotes = [
     '<a href="https://en.wikipedia.org/wiki/W._E._Hick" target="_blank">William Edmund Hick</a>',
   ],
   [
-    "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
+    "Sometimes when you innovate, you make mistakes.",
     '<a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank">Steve Jobs</a>',
   ],
   [

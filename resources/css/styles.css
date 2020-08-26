@@ -496,7 +496,7 @@ main .quote-wrapper .quote {
   max-width: 100vw;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1920px) {
   main .quote-wrapper .quote {
     margin-top: 0.75rem;
     font-size: 8rem;
@@ -504,11 +504,11 @@ main .quote-wrapper .quote {
   }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1920px) {
   main .quote-wrapper .quote {
     margin-top: 0.75rem;
-    font-size: 6.5rem;
-    line-height: 7.25rem;
+    font-size: 6rem;
+    line-height: 7rem;
   }
 }
 
@@ -516,7 +516,7 @@ main .quote-wrapper .quote {
   main .quote-wrapper .quote {
     margin-top: 0.75rem;
     font-size: 5rem;
-    line-height: 5.5rem;
+    line-height: 5.75rem;
   }
 }
 

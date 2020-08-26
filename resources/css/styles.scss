@@ -1,5 +1,6 @@
 // Breakpoints
 
+$breakpoint-desktop-xxxl: 1920px;
 $breakpoint-desktop-xxl: 1600px;
 $breakpoint-desktop-hd: 1440px;
 $breakpoint-desktop: 1025px;
@@ -443,22 +444,22 @@ main {
       opacity: 0.9;
       max-width: 100vw;
 
-      @media only screen and (min-width: $breakpoint-desktop-xxl) {
+      @media only screen and (min-width: $breakpoint-desktop-xxxl) {
         margin-top: 0.75rem;
         font-size: 8rem;
         line-height: 9rem;
       }
 
-      @media only screen and (max-width: $breakpoint-desktop-xxl) {
+      @media only screen and (max-width: $breakpoint-desktop-xxxl) {
         margin-top: 0.75rem;
-        font-size: 6.5rem;
-        line-height: 7.25rem;
+        font-size: 6rem;
+        line-height: 7rem;
       }
 
       @media only screen and (max-width: $breakpoint-desktop-hd) {
         margin-top: 0.75rem;
         font-size: 5rem;
-        line-height: 5.5rem;
+        line-height: 5.75rem;
       }
 
       @media only screen and (max-width: $breakpoint-desktop) {
